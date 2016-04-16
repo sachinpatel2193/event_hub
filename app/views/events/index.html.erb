@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Events</h1>
+<h1>Upcoming Events</h1>
 
 <table>
-  <thead>
+<!--  <thead>
     <tr>
       <th>Name</th>
       <th>Address</th>
@@ -15,24 +15,43 @@
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead>-->
 
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.name %></td>
-        <td><%= event.address %></td>
-        <td><%= event.city %></td>
+        
+        <!--<td><%= event.address %></td>
+        
         <td><%= event.province %></td>
         <td><%= event.postal_code %></td>
         <td><%= event.country %></td>
         <td><%= event.event_date %></td>
-        <td><%= event.description %></td>
-        <td><%= link_to 'Show', event %></td>
+        <td></td>-->
+        <td></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+   
+<div class="container">
+  <div class ="row">
+    <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i><%= event.name %></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p><b><%= event.city %></b></p>
+                        <p><%= event.description %></p>
+                        <a class="btn btn-default" <%= link_to 'More About Event', event %> </a>
+                    </div>
+                </div>
+            </div>
+            <% end %> 
+  </div>
+</div>
+
+
   </tbody>
 </table>
 
