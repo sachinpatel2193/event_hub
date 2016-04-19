@@ -15,6 +15,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    
   end
 
   # GET /events/1/edit
@@ -28,6 +29,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
+        ModelMailer.new_event_notification(@greeting, current_user).deliver
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
