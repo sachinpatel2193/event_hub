@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'about/about'
+
   resources :events
   devise_for :users
   resources :users
