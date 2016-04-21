@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>EventHub</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -24,6 +24,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    
                     <li>
                         <a href="#">About</a>
                     </li>
@@ -107,6 +108,11 @@
             </div>
             
         </div>
+     
+            <% if user_signed_in? %>
+               <h2>Hi! <%= current_user.name %> </h2>
+            <% end %>
+                    
         <!-- /.row -->
         <%= yield %>
         <!-- Portfolio Section -->
