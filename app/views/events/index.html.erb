@@ -17,7 +17,9 @@
     </tr>
   </thead>-->
 
-  <tbody>
+<div class="container">
+  <div class ="row">
+    
     <% @events.each do |event| %>
       <tr>
         
@@ -28,33 +30,28 @@
         <td><%= event.country %></td>
         <td><%= event.event_date %></td>
         <td></td>-->
-        <td></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-   
-<div class="container">
-  <div class ="row">
-    <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i><%= event.name %></h4>
-                    </div>
-                    <div class="panel-body">
-                        <p><b><%= event.city %></b></p>
-                        <p><%= event.description %></p>
-                        <a class="btn btn-default" <%= link_to 'More About Event', event %> </a>
-                    </div>
-                </div>
-            </div>
-            <% end %> 
+    <div class="col-md-4" id="event_panel">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4><i class="fa fa-fw fa-check"></i><%= event.name %></h4>
+        </div>
+        <div class="panel-body">
+          <p><b><%= event.city %></b></p>
+          <p><%=  truncate(event.description, :length => 50, :separator => '') %></p>
+          <a class="btn btn-default" <%= link_to 'More About Event', event %> </a>
+        </div>
+      </div>
+    </div>
+            
   </div>
+  <% end %>
 </div>
+ 
 
-
-  </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Event', new_event_path %>
+
+
+

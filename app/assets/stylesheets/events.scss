@@ -1,3 +1,84 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#event_panel{
+
+}
+
+#new_event_div
+{
+   color: lightseagreen;
+}
+
+#listing_user
+{
+    color: lightcoral;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    text-align: center;
+}    
+
+/*#new_user
+{
+    color: lightcoral;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+  //  text-align: center;
+}
+*/
+#listuser_name
+{
+    color: mediumvioletred;
+    font-size: x-large;
+    font-style: oblique;
+    font-family: cursive;
+}
+
+#edit_user
+{
+    color: lightcoral;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    text-align: center;
+}
+
+#edit_div
+{
+    width: 70%;
+    margin-top: 3%;
+    border: 1px solid;
+    border-color: darkcyan;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#edit_user_name
+{
+    color: brown;
+    font-size: x-large;
+}
+
+#edit_showbutton
+{
+   float: right;
+   margin-right: 1.5%;
+}
+
+#user_button
+{
+    float: left;
+    margin-left: 1%;
+}
+
+
+#show_div
+{
+    width: 70%;
+    margin-top: 3%;
+    border: 1px solid;
+    border-color: darkcyan;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}

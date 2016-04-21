@@ -12,4 +12,6 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( about.scss )
 
+Rails.application.config.assets.precompile += %w( events.scss )
 
+Rails.application.config.assets.precompile += %w( users.scss )
