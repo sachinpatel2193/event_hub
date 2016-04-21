@@ -25,7 +25,7 @@
  <% end %>
   
   <% if (!user_signed_in? || (user_signed_in? && !current_user.admin?)) %>
-    <h2>Sorry.</h2>
+    <h2>Sorry. This part can only seen by the Admin.</h2>
  <% end %>
   
   </tbody>
