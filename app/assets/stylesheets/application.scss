@@ -1,41 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
+#new_event_div
+{
+   color: lightseagreen;
 
- */
-#maindiv_aboutus
-{
-    height: 150px;
-    width: 100%;
-    background-color: darksalmon;
-    text-align: center;
-    
-}
-
-#aboutus_h1
-{
-    color: aliceblue;
-    height: 30%;
-    padding-top: 5%;
-}
-#trupti_id
-{
-   width: 30%;
-   align: center;
-    
-}
-.row
-{
-    margin-top: 5%;
 }

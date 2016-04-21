@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
 #maindiv_aboutus
 {
     height: 150px;
@@ -24,8 +40,8 @@
 }
 .row
 {
-    margin-top: 5%;
-   
+   margin-top: 5%;
+   text-align: center;
 }
 
 #text
@@ -33,4 +49,12 @@
     color: crimson;
     font-family: cursive;
     font-size: x-large;
+}
+
+#about_body
+{
+    color: darkorchid;
+    font-family: serif;
+    font-size: medium;
+    text-align: justify;
 }
