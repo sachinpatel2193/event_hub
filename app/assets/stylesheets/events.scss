@@ -5,46 +5,9 @@
 
 }
 
-#new_event_div
+#event_show_div
 {
-   color: lightseagreen;
-}
-
-#listing_user
-{
-    color: lightcoral;
-    font-family: cursive;
-    font-size: -webkit-xxx-large;
-    text-align: center;
-}    
-
-/*#new_user
-{
-    color: lightcoral;
-    font-family: cursive;
-    font-size: -webkit-xxx-large;
-  //  text-align: center;
-}
-*/
-#listuser_name
-{
-    color: mediumvioletred;
-    font-size: x-large;
-    font-style: oblique;
-    font-family: cursive;
-}
-
-#edit_user
-{
-    color: lightcoral;
-    font-family: cursive;
-    font-size: -webkit-xxx-large;
-    text-align: center;
-}
-
-#edit_div
-{
-    width: 70%;
+    width: 60%;
     margin-top: 3%;
     border: 1px solid;
     border-color: darkcyan;
@@ -53,32 +16,39 @@
     padding-bottom: 2%;
 }
 
-#edit_user_name
+#event_show_button
+{
+    float: right;
+    margin-right: 1.5%;
+}
+
+#event_show_label
 {
     color: brown;
-    font-size: x-large;
+    font-size: large;
 }
 
-#edit_showbutton
-{
-   float: right;
-   margin-right: 1.5%;
-}
-
-#user_button
-{
-    float: left;
-    margin-left: 1%;
-}
-
-
-#show_div
+#new_event_div
 {
     width: 70%;
-    margin-top: 3%;
     border: 1px solid;
     border-color: darkcyan;
     border-radius: 10px;
     padding-top: 2%;
     padding-bottom: 2%;
+    
+}
+
+#form_lable
+{
+    color: brown;
+    font-size: large;
+}
+
+#edit_event
+{
+    color: lightcoral;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    text-align: center;
 }
