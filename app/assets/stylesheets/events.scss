@@ -45,10 +45,75 @@
     font-size: large;
 }
 
-#edit_event
+#edit_event_heading
 {
-    color: lightcoral;
+    color: white;
     font-family: cursive;
     font-size: -webkit-xxx-large;
+    background-color: crimson;
+    padding: 1%;
+    margin-bottom: 2%;
+   
+}
+
+#event_heading_div
+{
+    color: orangered;
+    font-family: cursive;
+    width: 73%;
+    font-size: -webkit-xxx-large;
+    text-align: center;   
+    padding-bottom: 1%;
+    
+}
+
+#Upcomingevent_heading
+{
+    color: lightslategrey;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    //background-color: lightslategrey;
+    padding: 1%;
+    margin-bottom: 2%;
+
+}
+
+#informationevent_heading
+{
+    color: lightseagreen;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+//    background-color: lightseagreen;
+    padding: 1%;
+    margin-bottom: 2%;
+  
+}
+
+#informationevent_div
+{
+    width: 63%; 
+    text-align: center;
+}
+
+#upcomingonevent_div
+{
+    width: 63%; 
+    text-align: center;
+}
+
+#new_event_heading
+{
+    color: teal;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+  //  background-color: teal;
+    padding: 1%;
+    margin-bottom: 2%;
+
+}
+
+#new_eventheading_div
+{
+    width: 73%; 
     text-align: center;
 }

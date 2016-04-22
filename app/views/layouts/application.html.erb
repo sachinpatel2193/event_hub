@@ -32,6 +32,11 @@
                         <a href="#">About</a>
                     </li>
                     
+                    
+                    <li>
+                        <a href="#"><span class= "glyphicon glyphicon-home" >Home</span></a>
+                    </li>
+                    
                     <li>
                         <% if !user_signed_in? %>
                             <%= link_to"Login", new_user_session_path(@user)%>
