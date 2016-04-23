@@ -73,7 +73,9 @@
           <% end %>
 
           <% if (user_signed_in? && !current_user.admin?) %>
-            <%= link_to "Book a Ticket", {:controller => "event_user", :action => "add_to_table", :user => current_user.id, :event => @event.id }, :class => "btn btn-success"%>
+              <% if current_user.id!=@event.user_id %>
+                <%= link_to "Book a Ticket", {:controller => "event_user", :action => "add_to_table", :user => current_user.id, :event => @event.id }, :class => "btn btn-success"%>
+            <% end %>
           <% end %>
           
       </div>
