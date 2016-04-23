@@ -28,9 +28,7 @@
                     <li>
                         <a href="#">About</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
+                    
                     <li>
                         <% if !user_signed_in? %>
                             <%= link_to"Login", new_user_session_path(@user)%>
