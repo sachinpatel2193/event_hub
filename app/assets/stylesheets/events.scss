@@ -41,7 +41,7 @@
 
 #form_lable
 {
-    color: brown;
+    color: mediumblue;
     font-size: large;
 }
 
@@ -116,4 +116,18 @@
 {
     width: 73%; 
     text-align: center;
+}
+
+#error_newevent_heading
+{
+    color: purple;
+    font-family: serif;
+}
+
+#erre_message
+{
+    color: orangered;
+    font-size: large;
+    font-family: serif;
+    
 }
