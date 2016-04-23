@@ -20,18 +20,20 @@
  */
 #maindiv_aboutus
 {
-    height: 150px;
+ //   height: 150px;
     width: 100%;
-    background-color: darksalmon;
+  //  background-color: darksalmon;
     text-align: center;
-    
+    padding-bottom: 2%; 
 }
 
 #aboutus_h1
 {
-    color: aliceblue;
-    height: 30%;
-    padding-top: 5%;
+    color: navy;
+  //  height: 30%;
+    /* padding-top: 5%; */
+    font-family: serif;
+    font-size: -webkit-xxx-large;
 }
 #trupti_id
 {
@@ -39,6 +41,7 @@
  
 }
 .row
+
 {
    margin-top: 5%;
    text-align: center;
@@ -57,4 +60,9 @@
     font-family: serif;
     font-size: medium;
     text-align: justify;
+}
+
+#about_fullbody
+{
+     font-family: cursive;
 }
