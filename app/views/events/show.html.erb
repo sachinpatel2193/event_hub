@@ -1,54 +1,81 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<div class="container" id="informationevent_div">
+    <h1 id= "informationevent_heading">Event Information</h1>    
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
+<div class= "container" id="event_show_div">
+      <div class= "form-group">
+          <p>
+            <strong id="event_show_label">Name:</strong>
+            <%= @event.name %>
+          </p>  
+      </div>
+      
+       <div class= "form-group">
+          <p>
+            <strong id="event_show_label">Address:</strong>
+            <%= @event.address %>
+          </p> 
+      </div>
+      
+       <div class= "form-group">
+           <p>
+              <strong id="event_show_label">City:</strong>
+              <%= @event.city %>
+           </p>
+      </div>
+      
+       <div class= "form-group">
+            <p>
+                <strong id="event_show_label">Province:</strong>
+                <%= @event.province %>
+            </p>
+      </div>
+     
+      <div class= "form-group">
+            <p>
+                <strong id="event_show_label">Postal code:</strong>
+                <%= @event.postal_code %>
+            </p>
+      </div>
+      
+      <div class= "form-group">
+          <p>
+              <strong id="event_show_label">Country:</strong>
+              <%= @event.country %>
+          </p>
+      </div>
+      
+      <div class= "form-group">
+          <p>
+              <strong id="event_show_label">Event date:</strong>
+              <%= @event.event_date %>
+          </p>
+      </div>
+      
+       <div class= "form-group">
+          <p>
+            <strong id="event_show_label">Description:</strong>
+            <%= @event.description %>
+          </p>
+      </div>
+      <div>
+          <% if (user_signed_in? && current_user.admin?) %>
+            <%= link_to 'Edit', edit_event_path(@event) , :class => "btn btn-success", :id => "event_show_button"%> 
+          <% end %>
+          
+          <%= link_to 'Back', events_path, :class => "btn btn-primary", :id => "event_show_button" %>
+          
+          <% if !user_signed_in? %>
+            <%= link_to"Book a Ticket", new_user_session_path(@user), :class => "btn btn-success"%>
+          <% end %>
 
-<p>
-  <strong>City:</strong>
-  <%= @event.city %>
-</p>
+          <% if (user_signed_in? && !current_user.admin?) %>
+            <%= link_to "Book a Ticket", {:controller => "event_user", :action => "add_to_table", :user => current_user.id, :event => @event.id }, :class => "btn btn-success"%>
+          <% end %>
+          
+      </div>
+</div>
 
-<p>
-  <strong>Province:</strong>
-  <%= @event.province %>
-</p>
-
-<p>
-  <strong>Postal code:</strong>
-  <%= @event.postal_code %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @event.country %>
-</p>
-
-<p>
-  <strong>Event date:</strong>
-  <%= @event.event_date %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-<% if (user_signed_in? && current_user.admin?) %>
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-<% end %>
-
-<%= link_to 'Back', events_path %>
-
-<% if !user_signed_in? %>
-  <%= link_to"Book a Ticket", new_user_session_path(@user)%>
-<% end %>
-
-<% if (user_signed_in? && !current_user.admin?) %>
-<%= link_to "Book a Ticket", {:controller => "event_user", :action => "add_to_table", :user => current_user.id, :event => @event.id }%>
-<% end %>

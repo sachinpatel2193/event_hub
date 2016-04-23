@@ -4,3 +4,130 @@
 #event_panel{
 
 }
+
+#event_show_div
+{
+    width: 60%;
+    margin-top: 3%;
+    border: 1px solid;
+    border-color: darkcyan;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#event_show_button
+{
+    float: right;
+    margin-right: 1.5%;
+}
+
+#event_show_label
+{
+    color: brown;
+    font-size: large;
+}
+
+#new_event_div
+{
+    width: 70%;
+    border: 1px solid;
+    border-color: darkcyan;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+}
+
+#form_lable
+{
+    color: mediumblue;
+    font-size: large;
+}
+
+#edit_event_heading
+{
+    color: white;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    background-color: crimson;
+    padding: 1%;
+    margin-bottom: 2%;
+   
+}
+
+#event_heading_div
+{
+    color: orangered;
+    font-family: cursive;
+    width: 73%;
+    font-size: -webkit-xxx-large;
+    text-align: center;   
+    padding-bottom: 1%;
+    
+}
+
+#Upcomingevent_heading
+{
+    color: lightslategrey;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    //background-color: lightslategrey;
+    padding: 1%;
+    margin-bottom: 2%;
+
+}
+
+#informationevent_heading
+{
+    color: lightseagreen;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+//    background-color: lightseagreen;
+    padding: 1%;
+    margin-bottom: 2%;
+  
+}
+
+#informationevent_div
+{
+    width: 63%; 
+    text-align: center;
+}
+
+#upcomingonevent_div
+{
+    width: 63%; 
+    text-align: center;
+}
+
+#new_event_heading
+{
+    color: teal;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+  //  background-color: teal;
+    padding: 1%;
+    margin-bottom: 2%;
+
+}
+
+#new_eventheading_div
+{
+    width: 73%; 
+    text-align: center;
+}
+
+#error_newevent_heading
+{
+    color: purple;
+    font-family: serif;
+}
+
+#erre_message
+{
+    color: orangered;
+    font-size: large;
+    font-family: serif;
+    
+}

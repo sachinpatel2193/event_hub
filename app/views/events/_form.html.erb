@@ -1,55 +1,86 @@
 <%= form_for(@event) do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+      <h2 id="error_newevent_heading"><%= pluralize(@event.errors.count, "Error") %> This event is not being saved because of empty or invalid field:</h2>
 
-      <ul>
+      <ul id="erre_message">
       <% @event.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
     <% end %>
-  
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :province %><br>
-    <%= f.text_field :province %>
-  </div>
-  <div class="field">
-    <%= f.label :postal_code %><br>
-    <%= f.text_field :postal_code %>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-  </div>
-  <div class="field">
-    <%= f.label :event_date %><br>
-    <%= f.datetime_select :event_date %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <% if user_signed_in? && current_user.admin? %>
-  <div>
-    <%= f.check_box(:status, {}, true, false) %>
-    <%= label_tag(:status, "Approved") %>
-  </div>
-  <% end %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    
+ <div class="container" id="new_event_div">     
+      <div class= "form-group has-error">
+          <p>
+              <%= f.label :name ,:id => "form_lable" %><br>
+              <%= f.text_field :name , :class => "form-control"%>
+          </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+         <p>
+            <%= f.label :address,:id => "form_lable" %><br>
+            <%= f.text_field :address, :class => "form-control" %>
+         </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+           <p>
+              <%= f.label :city,:id => "form_lable" %><br>
+              <%= f.text_field :city, :class => "form-control" %>
+           </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+           <p>
+              <%= f.label :province,:id => "form_lable" %><br>
+              <%= f.text_field :province, :class => "form-control" %>
+           </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+           <p>
+              <%= f.label :postal_code,:id => "form_lable" %><br>
+              <%= f.text_field :postal_code, :class => "form-control" %>
+           </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+          <p>
+             <%= f.label :country,:id => "form_lable" %><br>
+             <%= f.text_field :country, :class => "form-control" %>
+          </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+           <p>
+              <%= f.label :event_date,:id => "form_lable" %><br>
+              <%= f.datetime_select :event_date, :class => "form-control" %>
+           </p>  
+      </div>
+      
+      <div class= "form-group has-error">
+            <p>
+              <%= f.label :description,:id => "form_lable" %><br>
+              <%= f.text_area :description, :class => "form-control" %>
+           </p>  
+      </div>
+      
+        <% if user_signed_in? && current_user.admin? %>
+        
+          <div  class= "form-group has-error">
+            <%= f.check_box(:status, {}, true, false) %>
+            <%= label_tag(:status, "Approved" ,:id => "form_lable") %>
+          </div>
+        
+          <% end %>
+          <div class="actions">
+              <%= f.submit :class => "btn btn-danger"%>
+              <%= link_to 'Show', @event , :class => "btn btn-success", :id => "event_show_button" %> 
+              <%= link_to 'Back', events_path ,:class => "btn btn-primary", :id => "event_show_button" %>
+          </div>
+     
+</div>  
 <% end %>

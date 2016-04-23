@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
+
   get 'event_user/add_to_table'
+
+  get 'about/about'
+
 
   resources :events
   devise_for :users
