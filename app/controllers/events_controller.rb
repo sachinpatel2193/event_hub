@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    #@events=Event.where(name: :search_name)
   end
 
   # GET /events/1

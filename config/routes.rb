@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'contact_us/contact'
+
   get 'event_user/add_to_table'
 
   get 'about/about'
