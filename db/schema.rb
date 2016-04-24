@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 20160422170753) do
     t.string   "country",     limit: 255
     t.datetime "event_date"
     t.text     "description", limit: 65535
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
-    t.boolean  "status",                    default: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.boolean  "status"
     t.integer  "user_id",     limit: 4
   end
 
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20160422170753) do
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
     t.boolean  "admin",                              default: false
-    t.string   "name",                   limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
