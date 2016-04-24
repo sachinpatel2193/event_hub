@@ -1,4 +1,4 @@
-<h1><%= current_user.name %>, Your Created Events</h1>
+<h2><%= current_user.name %>, Your Created Events</h2>
 <div class="container">
   <div class ="row">
    <% if (!user_signed_in? || (user_signed_in? && !current_user.admin?)) %>
