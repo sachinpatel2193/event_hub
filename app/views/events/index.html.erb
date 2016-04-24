@@ -41,6 +41,7 @@
     <% @events.each do |event| %>
     
       <% if(event.status) %>
+      <% if(event.event_date>Time.now) %>
       <table>
     <div class="col-md-4" id="event_panel">
       <div class="panel panel-info">
@@ -56,15 +57,8 @@
     </div>
     </table>
     <% end %>
+    <% end %>
     <% end %>        
   </div>
   <% end %>
 </div>
- 
-
-
-
-
-
-
-

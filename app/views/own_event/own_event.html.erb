@@ -1,0 +1,27 @@
+<h1><%= current_user.name %>, Your Created Events</h1>
+<div class="container">
+  <div class ="row">
+   <% if (!user_signed_in? || (user_signed_in? && !current_user.admin?)) %>
+  
+    <% @event.each do |event| %>
+    
+      <% if(event.status) %>
+      <table>
+    <div class="col-md-4" id="event_panel">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4><i class="fa fa-fw fa-check"></i><%= event.name %></h4>
+        </div>
+        <div class="panel-body">
+          <p><b><%= event.city %></b></p>
+          <p><%=  truncate(event.description, :length => 50, :separator => '') %></p>
+          <a id="more_about_event_button" <%= link_to 'More About Event', event %> </a>
+        </div>
+      </div>
+    </div>
+    </table>
+    <% end %>
+    <% end %>        
+  </div>
+  <% end %>
+</div>

@@ -29,6 +29,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <%= Time.now %>
+                    </li>
+                    <li>
                            <%= link_to('Home', events_path(@user)) %>
                     <!--   <a href="#"><span class= "glyphicon glyphicon-home" >Home</span></a>  -->
                     </li>
@@ -56,7 +59,7 @@
                             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
                         <% end %>
                     </li>
-                    
+                    <% if user_signed_in? %>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Your Account Settings <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -67,13 +70,14 @@
                                 <%= link_to'Reset your Password', new_user_password_path(@user) %>
                             </li>
                             <li>
-                                <% if (!user_signed_in? || (user_signed_in? && !current_user.admin?)) %>
-                                  
+                                <% if (user_signed_in? && !current_user.admin?) %>
+                                  <%= link_to'Your created events', own_event_own_event_path(current_user) %>
                                 <% end  %>
                             </li>
                             
                         </ul>
                     </li>
+                    <% end %>
                     <li>
                         <% if user_signed_in? %>
                            <p id="current_user_lable"> Hi! <%= current_user.name %> </p>
